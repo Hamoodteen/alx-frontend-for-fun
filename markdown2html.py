@@ -33,3 +33,8 @@ if __name__ == "__main__":
                 elif line.startswith("###### "):
                     line = line.replace("###### ", "")
                     html.write(f"<h6>{line}</h6>\n")
+                elif line.startswith("\n"):
+                    line = line.replace("\n", "")
+                    html.write(f"<br/>")
+                else:
+                    html.write(f"<p>{line}</p>")
