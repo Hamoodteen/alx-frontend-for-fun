@@ -16,14 +16,20 @@ if __name__ == "__main__":
             for line in readme.readlines():
                 line = line.rstrip('\n')
                 if line.startswith("# "):
+                    line = line.replace("# ", "")
                     html.write(f"<h1>{line}</h1>\n")
                 elif line.startswith("## "):
+                    line = line.replace("## ", "")
                     html.write(f"<h2>{line}</h2>\n")
                 elif line.startswith("### "):
+                    line = line.replace("### ", "")
                     html.write(f"<h3>{line}</h3>\n")
                 elif line.startswith("#### "):
+                    line = line.replace("#### ", "")
                     html.write(f"<h4>{line}</h4>\n")
                 elif line.startswith("##### "):
+                    line = line.replace("##### ", "")
                     html.write(f"<h5>{line}</h5>\n")
                 elif line.startswith("###### "):
+                    line = line.replace("###### ", "")
                     html.write(f"<h6>{line}</h6>\n")
