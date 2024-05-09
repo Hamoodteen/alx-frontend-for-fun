@@ -15,14 +15,14 @@ if __name__ == "__main__":
         with open(f"./{sys.argv[1]}", "r") as readme, open(f"./{sys.argv[2]}", "a") as html:
             for line in readme.readlines():
                 if line.startswith("# "):
-                    html.write(f"<h1>{line}</h1>")
+                    html.write(f"<h1>{line}</h1>\n")
                 elif line.startswith("## "):
-                    html.write(f"<h2>{line}</h2>")
+                    html.write(f"<h2>{line}</h2>\n")
                 elif line.startswith("### "):
-                    html.write(f"<h3>{line}</h3>")
+                    html.write(f"<h3>{line}</h3>\n")
                 elif line.startswith("#### "):
-                    html.write(f"<h4>{line}</h4>")
+                    html.write(f"<h4>{line}</h4>\n")
                 elif line.startswith("##### "):
-                    html.write(f"<h5>{line}</h5>")
+                    html.write(f"<h5>{line}</h5>\n")
                 elif line.startswith("###### "):
-                    html.write(f"<h6>{line}</h6>")
+                    html.write(f"<h6>{line}</h6>\n")

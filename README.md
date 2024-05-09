@@ -1,4 +1,3 @@
-# alx-frontend-for-fun
 # My title
 ## My title2
 # My title3
