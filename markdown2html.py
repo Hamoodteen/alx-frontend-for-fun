@@ -14,6 +14,7 @@ if __name__ == "__main__":
     else:
         with open(f"./{sys.argv[1]}", "r") as readme, open(f"./{sys.argv[2]}", "a") as html:
             for line in readme.readlines():
+                line = line.rstrip('\n')
                 if line.startswith("# "):
                     html.write(f"<h1>{line}</h1>\n")
                 elif line.startswith("## "):
